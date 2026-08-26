@@ -14,7 +14,7 @@ fullscreen = 0
 android.permissions = INTERNET,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
 android.api = 34
 android.minapi = 26
-android.ndk = 25b
+android.ndk_path = /usr/local/lib/android/sdk/ndk/27.3.13750724
 android.archs = arm64-v8a, armeabi-v7a
 android.allow_backup = True
 
