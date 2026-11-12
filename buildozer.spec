@@ -1,7 +1,7 @@
 [app]
 
 # (str) Title of your application
-title = Portal do Aluno
+title = Suri Portal
 
 # (str) Package name
 package.name = portalaluno
@@ -13,13 +13,16 @@ package.domain = org.fractal
 source.dir = .
 
 # (str) Application version
-version = 0.1
+version = 0.2
+android.numeric_version = 10262
 
 # (list) Source file extensions
 source.include_exts = py,png,jpg,kv,atlas
+source.exclude_patterns = test_api_client.py,__pycache__/*
+source.exclude_dirs = tools
 
 # (list) Python requirements
-requirements = python3,kivy==2.3.1,requests,plyer,pyjnius,certifi,urllib3,charset_normalizer,idna
+requirements = python3,kivy==2.3.1,requests,pyjnius,certifi,urllib3,charset_normalizer,idna
 
 # (str) Orientation
 orientation = portrait
@@ -28,7 +31,11 @@ orientation = portrait
 fullscreen = 0
 
 # (list) Android permissions
-android.permissions = INTERNET,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
+android.permissions = INTERNET
+android.extra_manifest_application_xml = android/extra_manifest_application_arguments.xml
+android.add_resources = android/res
+android.gradle_dependencies = androidx.core:core:1.13.1
+android.enable_androidx = True
 
 # Android target/minimum API
 android.api = 36
